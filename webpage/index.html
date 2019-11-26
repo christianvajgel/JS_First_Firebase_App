@@ -5,18 +5,30 @@
         <title>JS_Messenger</title>
         <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-firestore.js"></script>
     </head>
     <body>
         <div style="margin: 20px">
             <label><h1>JS_Messenger</h1></label><br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required="required"/><br>
-            <label for="password">Password:</label>
-            <input type="password" name="password" id="password" placeholder="Enter your password" required="required"><br>
-            <br><button type="button" id="buttonRegister">Register</button><br>
-            <br><button type="button" id="buttonLogin">Login</button><br>
+            <div id="div_login">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" value="christian@mail.com" required="required"/><br>
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" placeholder="Enter your password" value="123456" required="required"><br>
+                <br><button type="button" id="buttonRegister">Register</button><br>
+                <br><button type="button" id="buttonLogin">Login</button><br>
+                <div>
+                    <p id="answer"></p>
+                </div>
+            </div>
+        </div>
+
+        <div id="div_msg" style="display: none;">
+            <label for="message">Message:</label>
+            <input type="text" name="message" id="message"><br><br>
+            <button type="button" id="buttonSend">Send</button>
             <div>
-                <p id="answer"></p>
+                <p id="p_message"></p>
             </div>
         </div>
         <script src="../src/firebaseScript.js"></script>
